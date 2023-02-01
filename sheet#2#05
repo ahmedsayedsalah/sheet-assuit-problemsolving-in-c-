@@ -1,0 +1,23 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/E
+*/
+
+//code
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i=2,max;
+    cin>>n>>max;
+    while(i<=n)
+    {
+        int a;
+        cin>>a;
+        if(a>max)
+            max=a;
+    i++;
+    }
+    cout<<max;
+    return 0;
+}
