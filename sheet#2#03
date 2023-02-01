@@ -1,0 +1,30 @@
+/*
+                        لينك المشكل
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/C
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,countev=0,countod=0,countpos=0,countneg=0;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        int num;
+        cin>>num;
+        if(num%2)
+            countod++;
+        else
+            countev++;
+        if(num!=0) // 0 is not positive and not negative
+        {
+        if(num==abs(num))
+            countpos++;
+        else
+            countneg++;
+        }
+    }
+    cout<<"Even: "<<countev<<"\n"<<"Odd: "<<countod<<"\n"<<"Positive: "<<countpos<<"\n"<<"Negative: "<<countneg;
+    return 0;
+}
