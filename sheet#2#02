@@ -1,0 +1,21 @@
+/*
+                        لينك المشكل
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/B
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    if(n==1) //n=هنا يوجد حاله واجده مفيش فيها اعداد زوجيه وهي عندما 1
+        cout<<-1;
+    else{
+    for(int i=2;i<=n;i+=2) //cases زودنا ال عداد ب 2 عشان نقلل من عدد ال 
+    {
+        cout<<i<<endl;
+    }
+    }
+    return 0;
+}
