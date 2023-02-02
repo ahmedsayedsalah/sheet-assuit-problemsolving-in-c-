@@ -1,0 +1,23 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/my
+*/
+
+//code
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+   for(int i=1;i<=n;i++)
+   {
+    int a;
+    cin>>a;
+    long long fact=1;             //int قيمة المضروب تتخطي 
+    for(int j=1;j<=a;j++)         //يجب اعطاء المضروب قيمة 1 بعد ما اللوب تنتهي لان لكل عدد مضروب خاص به
+           fact*=j;
+     cout<<fact<<endl;
+   }
+    return 0;
+}
