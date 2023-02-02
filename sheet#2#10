@@ -1,0 +1,28 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/I
+*/
+
+//code
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+   int n,a;
+    cin>>n;
+    for(int j=2;j<=n;j++)
+    {
+       a=0;
+    for(int i=2;i<=j/2;i++)
+    {
+        if(j%i==0)
+          {
+              a=1;
+              break;
+          }
+    }
+    if(a==0)
+     cout<<j<<" ";
+    }
+   return 0;
+}
