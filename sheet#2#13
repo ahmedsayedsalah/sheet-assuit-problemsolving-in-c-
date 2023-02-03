@@ -1,0 +1,41 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/M
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int x,y,b=0;
+    cin>>x>>y;
+    for(int i=x;i<=y;i++) //loop for numbers from x to y
+    {
+        bool check=false;
+        int a=i;         
+        while(a!=0)       //loop to check about numbers that is luckey or not
+        {
+            if(a%10==4 || a%10==7)
+            {
+                  check=true;
+                  a/=10; //0
+            }
+            else
+            {
+                check=false;
+                break;
+            }
+        }
+        if(check==true)      //used to print luckey numbers
+            {
+                cout<<i<<" ";
+                b++;         //used to print -1
+            }
+    }
+    if(b==0)
+        cout<<-1;
+   return 0;
+}
