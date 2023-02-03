@@ -1,0 +1,29 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Q
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int n;
+    cin>>n;
+    while(n--) //numbers of digits  
+    {
+        long long a;
+        cin>>a;
+        if(a==0)
+            cout<<0;
+        while(a!=0) //seprate the numbers about its some 
+        {
+            cout<<a%10<<" ";
+            a/=10;
+        }
+        cout<<endl;
+    }
+   return 0;
+}
