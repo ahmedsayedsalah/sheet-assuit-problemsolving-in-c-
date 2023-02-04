@@ -1,0 +1,33 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Y
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int n,n1=0,n2=1,next=0;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        if(i==1)
+        {
+            cout<<0<<" ";
+            continue;
+        }
+        if(i==2)
+        {
+            cout<<1<<" ";
+            continue;
+        }
+        next=n1+n2;
+        n1=n2;
+        n2=next;
+        cout<<next<<" ";
+    }
+   return 0;
+}
