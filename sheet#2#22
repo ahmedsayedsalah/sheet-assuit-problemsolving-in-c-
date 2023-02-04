@@ -1,0 +1,25 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/V
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int n;
+    cin>>n;
+    for(int i=1;i<=(n*3+n);i++) // 7*3+7 = 28 = (27 + "PUM")
+    {
+        if(i%4==0)
+        {
+            cout<<"PUM"<<endl;
+        }
+        else
+            cout<<i<<" ";
+    }
+   return 0;
+}
