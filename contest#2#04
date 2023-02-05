@@ -1,0 +1,31 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/D
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int n;
+    cin>>n;
+    while(n--)
+    {
+       int a,b;
+       cin>>a>>b;
+       int mi=min(a,b),ma=max(a,b);
+
+       /*
+        sum of numbers from 1 or 0 to n = n(n+1)/2
+        sum of numbers from m to n (inclusive) = n(n+1)/2 - (m(m+1)/2)
+       */
+
+       mi--; //because m is inclusive in the sum
+       long long res1=(long long)mi*(mi+1)/2,res2=(long long)ma*(ma+1)/2;
+       cout<<res2-res1<<endl;
+    }
+   return 0;
+}
