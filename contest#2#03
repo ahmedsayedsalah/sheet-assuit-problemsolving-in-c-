@@ -1,0 +1,30 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/C
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int n,k,res=1000000000+1;
+    cin>>n>>k;
+    for(int a=1;a<=n;a++) // 123   456 78
+    {
+        int x;            // 4-12  350 27
+        cin>>x;
+        if(res>x)
+            res=x;        // 4-1-1 330 22
+        if(a%k==0)
+        {
+            cout<<res<<" ";
+            res=1000000000+1;
+        }
+        else if(a==n)
+            cout<<res;
+    }
+   return 0;
+}
