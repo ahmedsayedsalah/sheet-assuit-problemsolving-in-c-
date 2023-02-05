@@ -1,0 +1,20 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/A
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    if(a-b>=0)
+        cout<<a-b;
+    else 
+        cout<<0;
+   return 0;
+}
