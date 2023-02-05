@@ -1,0 +1,31 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/B
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    int n;
+    cin>>n;
+    for(int a=1;a<=n;a++)
+    {
+        for(int b=1;b<=n;b++)
+        {
+            if(a==(n/2+1) && a==b)
+                cout<<"X";
+            else if(a==b)
+                cout<<"\\";
+            else if((n+1)-b==a)
+                cout<<"/";
+            else
+                cout<<"*";
+        }
+        cout<<endl;
+    }
+   return 0;
+}
