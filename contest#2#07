@@ -1,0 +1,40 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/G
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    long long n;
+    cin>>n;
+    while(n--)
+    {
+        long long a;
+        long long b,sum=0;
+        cin>>a>>b;
+        if(a*(a+1)/2 < b)
+                cout<<-1<<endl;
+        else
+        {
+            for(long long c=a;c>=1;c--)
+            {
+                if(sum+c <= b)
+                    {
+                        sum+=c;
+                        cout<<c<<" ";
+                    }
+                if(sum==b)
+                    {
+                        cout<<endl;
+                        break;
+                    }
+            }
+        }
+    }
+   return 0;
+}
