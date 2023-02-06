@@ -1,0 +1,17 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/H
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    long long n; //there is not data type carry 10 ^ 100 so print 0 0
+    cin>>n;
+    cout<<"0 0";
+   return 0;
+}
