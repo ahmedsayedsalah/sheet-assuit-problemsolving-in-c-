@@ -1,0 +1,41 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    int size,count=0;
+    cin>>size; //3
+    int arr[size];
+    for(int i=0;i<size;i++) //8 12 40
+        cin>>arr[i];
+    while(true)
+    {
+    for(int i=0;i<size;i++) //8 12 40
+    {
+        if(arr[i]%2)
+        {
+            cout<<count;
+            return 0;
+        }
+        else
+        {
+            arr[i]/=2;
+        }
+    }
+            count++; //1 2
+    }
+   return 0;
+}
