@@ -1,0 +1,43 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/U
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    //size of array and its subsequnce
+    int size1,size2;
+    cin>>size1>>size2;
+    //represent value of array and its subsequnce
+    int arr1[size1],arr2[size2];
+    for(int i=0;i<size1;i++)
+        cin>>arr1[i];
+    for(int i=0;i<size2;i++)
+        cin>>arr2[i];
+    
+    int z=0,count=0;
+    for(int i=0;i<size1;i++)
+    {
+       if(arr1[i]==arr2[z])
+       {
+           z++;
+           count++;
+       }
+    }
+    if(count==size2)
+        cout<<"YES";
+    else
+        cout<<"NO";
+   return 0;
+}
