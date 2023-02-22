@@ -1,0 +1,45 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/T
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    //size of two dimnisonal array
+    int size;
+    cin>>size;
+
+    //declaration of two dimnisonal array
+    int arr[size][size];
+
+    long sumPrimDiognal=0,sumSecDiognal=0;
+
+    //nested loop to enter value of array and calculate sumPrimDiognal and sumSecDiognal
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++)
+        {
+            cin>>arr[i][j];
+            if(i==j)
+                sumPrimDiognal+=arr[i][j];
+            if(i==(size-1)-j)
+                sumSecDiognal+=arr[i][j];
+        }
+    }
+
+    //sum of main diognal
+    sumPrimDiognal-=sumSecDiognal;
+    sumPrimDiognal=abs(sumPrimDiognal);
+    cout<<sumPrimDiognal;
+   return 0;
+}
