@@ -1,0 +1,33 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/B
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    int sizeArr;
+    cin>>sizeArr;
+    //declaration of array
+    int arr[sizeArr];
+    //initalization from user
+    for(int i=0;i<sizeArr;i++)
+        cin>>arr[i];
+    for(int i=0;i<sizeArr;i++)
+    {
+        if(arr[i]==0)
+            reverse(arr,arr+i); //reverse all elements before element = 0
+    }
+    for(int i=0;i<sizeArr;i++)
+        cout<<arr[i]<<" ";
+   return 0;
+}
