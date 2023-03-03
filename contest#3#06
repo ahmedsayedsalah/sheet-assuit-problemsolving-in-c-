@@ -1,0 +1,32 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/F
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    int size;
+    cin>>size;
+    int arr[100000+1];
+    for(int i=0;i<size;i++)
+        cin>>arr[i];
+    int x=size-1;
+    for(int i=0;i<size/2;i++)
+    {
+        cout<<arr[i]<<" "<<arr[x]<<" ";
+        x--;
+    }
+    if(size%2)
+        cout<<arr[size/2];
+   return 0;
+}
