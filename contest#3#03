@@ -1,0 +1,35 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/C
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    int sizeArr,maxCount;
+    long long sumMaxNum=0;
+    cin>>sizeArr>>maxCount;
+    long long arr[sizeArr];
+    for(int i=0;i<sizeArr;i++)
+        cin>>arr[i];
+    sort(arr,arr+sizeArr);
+    int k=sizeArr-1;
+    while(maxCount--)
+    {
+        if(arr[k]<0)
+            break;
+        sumMaxNum+=arr[k];
+        k--;
+    }
+        cout<<sumMaxNum;
+   return 0;
+}
