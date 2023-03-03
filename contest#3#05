@@ -1,0 +1,47 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/E
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    int size;
+    cin>>size;
+    int arr[100000+10];
+    int x=size+2;
+    for(int i=2;i<x;i++)
+        cin>>arr[i];
+    int minCount1=0,minCount2=0;
+    for(int i=2;i<x;i++)
+    {
+        if(i%2==0)
+        {
+            if(arr[i]<0)
+            minCount1++;
+            else
+            minCount2++;
+        }
+        else
+        {
+            if(arr[i]>0)
+            minCount1++;
+            else
+            minCount2++;
+        }
+    }
+    if(minCount1>=minCount2)
+        cout<<minCount2;
+    else
+        cout<<minCount1;
+   return 0;
+}
