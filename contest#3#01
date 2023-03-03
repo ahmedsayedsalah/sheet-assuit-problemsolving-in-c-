@@ -1,0 +1,30 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/A
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//main function
+int main()
+{
+    //fast input and output
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    int numTestCase;
+    cin>>numTestCase;
+    while(numTestCase--)
+    {
+        int num1,num2;
+        cin>>num1>>num2;
+        if(num1==num2)
+            cout<<"Square"<<endl;
+        else
+            cout<<"Rectangle"<<endl;
+    }
+   return 0;
+}
