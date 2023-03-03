@@ -1,0 +1,50 @@
+/*
+                        لينك المشكلة
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/G
+*/
+
+//code
+//library contains all of functions that you may use
+#include <bits/stdc++.h>
+using namespace std;
+//condition
+bool isEven(int x)
+{
+    if(x%2==0)
+        return true;
+    else
+        return false;
+}
+//main function
+int main()
+{
+    //fast input and output
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    //start
+    int testCases;
+    cin>>testCases;
+    while(testCases--)
+    {
+    int size;
+    cin>>size;
+    int arr[100000+1];
+    for(int i=0;i<size;i++)
+        cin>>arr[i];
+    if(size%2)
+        cout<<-1<<endl;
+    else
+    {
+        int countEven=count_if(arr,arr+size,isEven);
+        int countOdd=size-countEven;
+        if(countEven==countOdd)
+        cout<<0<<endl;
+        else if(countEven>countOdd)
+        cout<<size/2-countOdd<<endl;
+        else
+        cout<<size/2-countEven<<endl;
+    }
+    }
+   return 0;
+}
